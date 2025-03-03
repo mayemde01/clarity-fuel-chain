@@ -7,6 +7,9 @@ A tokenized system for managing fuel logistics on the Stacks blockchain.
 - Batch tracking with quality metrics
 - Transfer and trading of fuel tokens
 - Real-time fuel inventory management
+- Emergency pause functionality
+- Event logging system
+- Enhanced batch status tracking
 
 ## Setup and Installation
 1. Clone the repository
@@ -24,8 +27,17 @@ A tokenized system for managing fuel logistics on the Stacks blockchain.
 
 ;; Check fuel inventory
 (contract-call? .fuel-chain get-inventory 'ST1...)
+
+;; Update batch status
+(contract-call? .fuel-chain update-batch-status u0 "COMPLETED")
 ```
 
 ## Dependencies
 - Clarity language
 - Clarinet for testing and deployment
+
+## Security Features
+- Contract pause mechanism for emergency situations
+- Event logging for all important operations
+- Enhanced access control
+- Comprehensive error handling
